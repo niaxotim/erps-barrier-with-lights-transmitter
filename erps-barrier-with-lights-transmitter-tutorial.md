@@ -75,7 +75,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 
 ### Step 5
-Now set the barrier to move up when the "up" string is received, and down when "down" is received.
+Now set the barrier to move up and down when the correct button is pressed.
 
 #### ~ tutorialhint
 ```blocks
