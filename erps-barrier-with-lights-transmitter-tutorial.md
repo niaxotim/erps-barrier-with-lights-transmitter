@@ -54,17 +54,28 @@ let's add a ``||radio:radio send string ""||`` block with each button press.
 ```blocks
 input.onButtonPressed(Button.A, function () {
     radio.sendString("")
-    Kitronik_ACCESSbit.barrierControl(Kitronik_ACCESSbit.BarrierPosition.Up)
 })
 input.onButtonPressed(Button.B, function () {
     radio.sendString("")
-    Kitronik_ACCESSbit.barrierControl(Kitronik_ACCESSbit.BarrierPosition.Down)
 })
 ```
 
 ### Step 4
 Change the string to be sent over the radio to "up" when the barrier moves up, and "down"
 whent the barrier moves down.
+
+#### ~ tutorialhint
+```blocks
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("up")
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("down")
+})
+```
+
+### Step 5
+Now set the barrier to move up when the "up" string is received, and down when "down" is received.
 
 #### ~ tutorialhint
 ```blocks
@@ -78,7 +89,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-### Step 5
+### Step 6
 That's it! We've now got some radio transmissions happening each time we move our barrier.  
 
 Connect your BBC micro:bit and click ``|Download|`` to transfer your code.  
